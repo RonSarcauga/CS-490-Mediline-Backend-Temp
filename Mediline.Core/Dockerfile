@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . /app
 
 COPY requirements.txt .
-RUN python -m venv env && env/Scripts/pip.exe install -r requirements.txt
+RUN python -m venv env && source env/Scripts/activate && python -m pip install -r requirements.txt
 
 # RUN python -m venv /app/venv && /app/venv/bin/pip install -r requirements.txt
 
